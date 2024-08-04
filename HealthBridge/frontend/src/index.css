@@ -1,0 +1,86 @@
+@tailwind base; /* Base layer initialization: sets up HealthBridges's base styles. */
+@tailwind components; /* Component layer initialization: for defining reusable design patterns. */
+@tailwind utilities; /* Utility layer initialization: for utility classes that can be applied directly in markup. */
+
+@layer base {
+    /* Styling sections universally across the site with significant vertical padding. */
+    section {
+        @apply py-[75px]; /* Sets both top and bottom padding to 75px for spacious vertical spacing. */
+    }
+}
+
+@layer components {
+    /* General container with responsive width and centered alignment, ideal for content layout. */
+    .container {
+        @apply max-w-full w-[1440px] px-5 mx-auto; /* Ensures container is full width but does not exceed 1440px, centered with 5px padding on each side. */
+    }
+
+    /* Button styling with a distinctive look involving a deep rounded shape and bold aesthetic. */
+    .btn {
+        @apply bg-primaryColor py-[15px] px-[35px] rounded-[50px] text-white font-[700] mt-[38px]; /* Applies primary color background, adequate padding, rounded fully (50px), white text, bold font, and top margin for spacing. */
+    }
+
+    /* Heading style defined for major titles, with specific typography settings for visual hierarchy. */
+    .heading {
+        @apply text-[44px] leading-[54px] font-[800] text-headingColor; /* Sets font size, line height for readability, weight for emphasis, and a specific color for headings. */
+    }
+
+    /* Paragraph styling aimed at normal text content, ensuring legibility and a consistent look. */
+    .text_para {
+        @apply text-[18px] leading-[30px] font-[400] text-textColor mt-[18px]; /* Standard text size and line height, normal weight, specific text color, and a slight top margin for separation from previous elements. */
+    }
+
+    .header {
+        /* Header background and layout styling */
+        @apply 
+            bg-[url('./assets/images/mask.png')] /* Sets the background image of the header to 'mask.png' from the assets folder */
+            bg-no-repeat  /* Ensures the background image does not repeat */
+            bg-center     /* Centers the background image horizontally and vertically */
+            bg-cover      /* Scales the background image to cover the entire element */
+            w-full        /* Sets the width of the header to fully span its container */
+            h-[100px]     /* Sets a fixed height of 100px for the header */
+            leading-[100px]; /* Sets the line height to 100px, vertically centering text within the header */
+    }
+
+    .hero_section {
+        @apply 
+            bg-[url('./assets/images/hero-bg.png')] /* Sets the background image of the header to 'hero-bg.png' from the assets folder */
+            bg-no-repeat  /* Ensures the background image does not repeat */
+            bg-center     /* Centers the background image horizontally and vertically */
+            bg-cover      /* Scales the background image to cover the entire element */
+    }
+
+    .form_label {
+        @apply text-textColor font-semibold text-[16px] leading-7 mb-2; /* Form label setting styling */
+    }
+
+    .form_input {
+        @apply w-full px-4 py-3 border border-solid border-[#0066ff61] focus:outline-none
+        focus:border-primaryColor text-[16px] leading-7 text-headingColor placeholder:text-textColor cursor-pointer
+        rounded-md;
+        /* Form input styling settings */
+    }
+    
+}
+
+/* Responsive adjustments at tablet breakpoint to modify layout and spacing dynamically. */
+@media only screen and (max-width: 1024px) {
+    .container {
+        @apply w-full; /* Allows the container to expand fully to the width of the device. */
+    }
+    
+    .section {
+        @apply py-[35px]; /* Reduces the vertical padding to accommodate smaller screens and less vertical space. */
+    }
+}
+
+/* Further responsive adjustments at mobile breakpoint for typography, adapting to smaller devices. */
+@media only screen and (max-width: 768px) {
+    .heading {
+        @apply text-[26px] leading-[36px]; /* Decreases font size and line height to fit smaller screens better. */
+    }
+
+    .text_para {
+        @apply text-[16px] leading-7 mt-3; /* Reduces font size for enhanced mobile readability, adjusts line height, and applies a moderate top margin for layout breathing room. */
+    }
+}

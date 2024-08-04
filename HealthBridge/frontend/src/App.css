@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+/* 
+=======================================================================================================================
+=======================================================================================================================
+=======================================================================================================================
+*/
+
+/* 
+  Resetting margin and padding for all elements to 0, 
+  and setting box-sizing to border-box to include padding and border in the element's total width and height.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+  Setting the default font family for the body to "Manrope" 
+  and specifying a fallback to sans-serif if "Manrope" is not available.
+*/
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  border: 1px solid #181a1e !important;
+  opacity: 100% !important;
+  background: #fff !important;
+}
+
+.sticky_header {
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background: #fff;
+  box-shadow: 3px 3px -8px 3px #ddd;
+}
+
+/* 
+  Custom styles for the active Swiper pagination bullet:
+  - Purple background
+  - No border
+*/
+.swiper-pagination-bullet-active {
+  background: #9771ff !important;
+  border: none !important;
+}
+
+/* 
+  Padding at the bottom of Swiper container:
+  - Adding padding to prevent content from being cut off
+*/
+.swiper {
+  padding-bottom: 70px !important;
+}
+
+.swiper-slide.swiper-slide-next {
+  background: #9771ff;
+  border-radius: 12px;
+  box-shadow: 0px 20px 70px rgba(0, 103, 255, 0.3) !important;
+}
+
+.swiper-slide.swiper-slide-next h4,
+.swiper-slide.swiper-slide-next p {
+  color: #fff !important;
+}
+
+/* 
+  Positioning Swiper pagination:
+  - Moving it to the bottom of the container
+*/
+.swiper-pagination {
+  top: 90% !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .navigation {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #00000084;
+    display: none;
+  }
+
+  .menu {
+    width: 15rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    z-index: 200;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+  }
+
+  /* 
+    Display menu class to show the menu panel:
+    - Block display to make it visible
+  */
+  .display_menu {
+    display: block;
+  }
+}
+
+/* 
+=======================================================================================================================
+=======================================================================================================================
+=======================================================================================================================
+*/
+
+/* 
+=======================================================================================================================
+=======================================================================================================================
+=======================================================================================================================
+*/
