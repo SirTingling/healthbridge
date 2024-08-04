@@ -2,6 +2,8 @@
 
 Hey UoL, Welcome to HealthBridge, a comprehensive healthcare application designed to connect underserved patients with healthcare providers, streamline medical services, and provide exceptional care through an easy-to-use platform. HealthBridge leverages modern web technologies to create a seamless experience for both patients and healthcare professionals.
 
+CM3070 Computer Science Final Report
+
 ## Features
 
 - **User Authentication**: Secure login and registration for patients and doctors.
